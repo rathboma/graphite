@@ -6,6 +6,10 @@ namespace :style do
   require 'rubocop/rake_task'
   desc 'Run rubocop for Ruby style checks'
   Rubocop::RakeTask.new(:ruby)
+
+  require 'foodcritic'
+  desc 'Run foodcritic for Chef style checks'
+  FoodCritic::Rake::LintTask.new(:chef)
 end
 
 desc 'Run all style checks'

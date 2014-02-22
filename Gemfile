@@ -12,7 +12,8 @@ group :development do
 end
 
 group :style do
-  gem 'rubocop'
+  gem 'rubocop', '~> 0.18'
+  gem 'foodcritic', '~> 3.0'
 end
 
 group :test do
