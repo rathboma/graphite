@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 
 group :development do
-  gem 'emeril', :group => :release
+  gem 'emeril'
   gem 'rake'
   gem 'rb-inotify', :require => false
   gem 'rb-fsevent', :require => false
@@ -21,5 +21,5 @@ group :test do
   gem 'kitchen-vagrant'
   gem 'kitchen-docker'
   gem 'librarian-chef'
-  gem 'chefspec'
+  gem 'chefspec', '~> 3.2.0'
 end
