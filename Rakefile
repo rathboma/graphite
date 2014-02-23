@@ -30,5 +30,10 @@ task :integration do
   end
 end
 
+namespace :travis do
+  desc "run on Travis"
+  task ci: ['unit']
+end
+
 require 'emeril/rake'
 
