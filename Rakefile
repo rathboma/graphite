@@ -36,4 +36,3 @@ namespace :travis do
 end
 
 require 'emeril/rake'
-

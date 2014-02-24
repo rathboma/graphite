@@ -2,9 +2,11 @@
 # vi: set ft=ruby :
 source 'https://rubygems.org'
 
+gem 'rake'
+gem 'librarian-chef'
+gem 'emeril', :group => :release
+
 group :development do
-  gem 'emeril'
-  gem 'rake'
   gem 'rb-inotify', :require => false
   gem 'rb-fsevent', :require => false
   gem 'rb-fchange', :require => false
@@ -17,9 +19,11 @@ group :style do
 end
 
 group :test do
+  gem 'chefspec', '~> 3.2.0'
+end
+
+group :integration do
   gem 'test-kitchen'
   gem 'kitchen-vagrant'
   gem 'kitchen-docker'
-  gem 'librarian-chef'
-  gem 'chefspec', '~> 3.2.0'
 end
