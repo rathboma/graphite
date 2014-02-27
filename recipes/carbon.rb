@@ -17,7 +17,12 @@
 # limitations under the License.
 #
 
-package 'python-twisted'
+if node['platform'] == 'centos'
+  package 'python-twisted-core'
+else
+  package 'python-twisted'
+end
+
 package 'python-simplejson'
 
 if node['graphite']['carbon']['enable_amqp']
